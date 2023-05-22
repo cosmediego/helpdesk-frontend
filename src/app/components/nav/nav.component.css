@@ -7,7 +7,7 @@
 {
     width: 13rem;
     color: white;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(58, 110, 198, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 img
@@ -31,5 +31,5 @@ img
 {
     margin: 1rem auto auto 1rem;
     color: white;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(58, 110, 198, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
