@@ -15,7 +15,7 @@ export class TecnicoListComponent implements OnInit {
       id: 1,
       nome: 'Valdir Cezar',
       cpf: '123.456.789-10',
-      email: 'valdir@mail.com',
+      email: 'valdir@email.com',
       senha: '1234',
       perfis: ['0'],
       dataCriacao: '15/08/2022'
