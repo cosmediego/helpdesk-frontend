@@ -10,20 +10,10 @@ import { Tecnico } from 'src/app/model/tecnico';
 })
 export class TecnicoListComponent implements OnInit {
 
-  ELEMENT_DATA: Tecnico[] = [
-    {
-      id: 1,
-      nome: 'Valdir Cezar',
-      cpf: '123.456.789-10',
-      email: 'valdir@email.com',
-      senha: '1234',
-      perfis: ['0'],
-      dataCriacao: '15/08/2022'
-
-    }
-  ]
+  ELEMENT_DATA: Tecnico[] = []
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
   dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
+
   constructor() { }
 
   ngOnInit(): void {
