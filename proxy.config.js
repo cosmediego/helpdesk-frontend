@@ -1,10 +1,9 @@
 const PROXY_CONFIG = [
     {
         context: [
-            '/api',
-            '/locais'
+            '/login'
         ],
-        target: "http://localhost:4200/",
+        target: "http://localhost:8080",
         secure: false,
         changerOrigin: true,
         pathRewrite: {
@@ -12,6 +11,4 @@ const PROXY_CONFIG = [
         }
     }
 ]
-
-
 module.exports = PROXY_CONFIG;
