@@ -34,7 +34,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { JwtModule } from '@auth0/angular-jwt';
 
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -71,12 +75,11 @@ import { ToastrModule } from 'ngx-toastr';
     MatListModule,
     MatCardModule,
     ToastrModule.forRoot({
-      timeOut: 4000,
+      timeOut: 18000,
       closeButton: true,
       progressBar: true
     }),
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
