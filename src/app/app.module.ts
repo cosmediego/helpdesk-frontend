@@ -35,6 +35,7 @@ import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { JwtModule } from '@auth0/angular-jwt';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -80,6 +81,7 @@ export function tokenGetter() {
       progressBar: true
     }),
   ],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

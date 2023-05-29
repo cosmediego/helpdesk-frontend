@@ -97,6 +97,7 @@
             "development": {
               "browserTarget": "helpdesk:build:development",
               "proxyConfig": "src/proxy.config.js"
+
             }
           },
           "defaultConfiguration": "development"

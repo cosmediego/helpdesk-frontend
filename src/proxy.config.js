@@ -5,10 +5,11 @@ const PROXY_CONFIG = [
         ],
         target: "http://localhost:8080",
         secure: false,
-        changerOrigin: true,
+        changeOrigin: true,
         pathRewrite: {
             "^/": ""
         }
     }
 ]
+
 module.exports = PROXY_CONFIG;
