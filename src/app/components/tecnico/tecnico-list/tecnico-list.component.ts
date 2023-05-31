@@ -26,7 +26,6 @@ export class TecnicoListComponent implements OnInit {
     this.findAll();
   }
 
-
   findAll() {
     this.service.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta;
