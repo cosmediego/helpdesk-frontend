@@ -34,9 +34,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
-import { JwtModule } from '@auth0/angular-jwt';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -63,7 +63,7 @@ export function tokenGetter() {
     // Requisições http
     HttpClientModule,
     // Angular Material
-    MatFormFieldModule,
+    MatFormFieldModule, 
     MatPaginatorModule,
     MatCheckboxModule,
     MatSnackBarModule,
@@ -78,12 +78,14 @@ export function tokenGetter() {
     MatListModule,
     MatCardModule,
     ToastrModule.forRoot({
-      timeOut: 18000,
+      timeOut: 4000,
       closeButton: true,
       progressBar: true
     }),
+    NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
