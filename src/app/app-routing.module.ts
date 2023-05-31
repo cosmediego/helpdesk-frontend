@@ -15,7 +15,6 @@ const routes: Routes = [
 
       { path: 'tecnicos', component: TecnicoListComponent },
       { path: 'tecnicos/create', component: TecnicoCreateComponent },
-
     ]
   }
 ];
