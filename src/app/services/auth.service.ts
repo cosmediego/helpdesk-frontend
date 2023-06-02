@@ -14,12 +14,10 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   authenticate(creds: Credenciais) {
-    //  return this.http.post(`${API_CONFIG.baseUrl}/login`, creds, {
-
     return this.http.post(`/login`, creds, {
       observe: 'response',
       responseType: 'text'
-    })   
+    })
   }
 
   successfulLogin(authToken: string) {
@@ -27,7 +25,7 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    const token = localStorage.getItem('token')
+    let token = localStorage.getItem('token')
     if (token != null) {
       return !this.jwtService.isTokenExpired(token)
     }

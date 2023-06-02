@@ -28,15 +28,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void { }
 
   logar() {
-    console.log('chegou aqui');
-
-    this.service.authenticate(this.creds)
-      .subscribe(resposta => {
+    this.service.authenticate(this.creds).subscribe(resposta => {
       this.service.successfulLogin(resposta.headers.get('Authorization').substring(7));
-        this.router.navigate([''])
-      }, () => {
-        this.toast.error('Usuário e/ou senha inválidos');
-      })
+      this.router.navigate([''])
+    }, () => {
+      this.toast.error('Usuário e/ou senha inválidos');
+    })
   }
 
   validaCampos(): boolean {
