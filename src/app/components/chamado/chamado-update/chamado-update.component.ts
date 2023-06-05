@@ -57,21 +57,26 @@ export class ChamadoUpdateComponent implements OnInit {
     this.chamadoService.findById(this.chamado.id).subscribe(resposta => {
       this.chamado = resposta;
     }, ex => {
+      console.log('errou aqui,', ex);
+
       this.toastService.error(ex.error.error);
     })
   }
 
   update(): void {
-    this.chamadoService.update(this.chamado).subscribe(resposta => {
+    this.chamadoService.update(this.chamado).subscribe(
+      () => {
       this.toastService.success('Chamado atualizado com sucesso', 'Atualizar chamado');
       this.router.navigate(['chamados']);
-    }, ex => {
+      },
+      ex => {
       this.toastService.error(ex.error.error);
     })
   }
 
   findAllClientes(): void {
-    this.clienteService.findAll().subscribe(resposta => {
+    this.clienteService.findAll().subscribe(
+      resposta => {
       this.clientes = resposta;
     })
   }

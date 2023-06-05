@@ -40,23 +40,29 @@ export class TecnicoUpdateComponent implements OnInit {
   }
 
   findById(): void {
-    this.service.findById(this.tecnico.id).subscribe(resposta => {
+    this.service.findById(this.tecnico.id).subscribe(
+      resposta => {
       resposta.perfis = []
       this.tecnico = resposta;
     })
   }
 
   update(): void {
-    this.service.update(this.tecnico).subscribe(() => {
+    this.service.update(this.tecnico).subscribe(
+      () => {
       this.toast.success('Técnico atualizado com sucesso', 'Update');
       this.router.navigate(['tecnicos'])
-    }, ex => {
+      },
+      ex => {
       if (ex.error.errors) {
         ex.error.errors.forEach(element => {
           this.toast.error(element.message);
+          console.log(ex, 'if');
+
         });
       } else {
         this.toast.error(ex.error.message);
+        console.log(ex, 'else');
       }
     })
   }

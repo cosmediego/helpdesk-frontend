@@ -62,13 +62,15 @@ export class ChamadoCreateComponent implements OnInit {
   }
 
   findAllClientes(): void {
-    this.clienteService.findAll().subscribe(resposta => {
+    this.clienteService.findAll().subscribe(
+      resposta => {
       this.clientes = resposta;
     })
   }
 
   findAllTecnicos(): void {
-    this.tecnicoService.findAll().subscribe(resposta => {
+    this.tecnicoService.findAll().subscribe(
+      resposta => {
       this.tecnicos = resposta;
     })
   }

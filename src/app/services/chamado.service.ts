@@ -7,7 +7,7 @@ import { Chamado } from '../models/chamado';
 @Injectable({
   providedIn: 'root'
 })
-export class ChamadoService {
+export class ChamadoService {   
 
   constructor(private http: HttpClient) { }
 
