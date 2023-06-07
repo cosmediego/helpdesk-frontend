@@ -18,7 +18,7 @@ export class AuthService {
       observe: 'response',
       responseType: 'text'
     })
-  }
+  }  
 
   successfulLogin(authToken: string) {
     localStorage.setItem('token', authToken);

@@ -12,18 +12,18 @@ export class ChamadoService {
   constructor(private http: HttpClient) { }
 
   findById(id: any): Observable<Chamado> {
-    return this.http.get<Chamado>(`/chamados/${id}`);
+    return this.http.get<Chamado>(`/api/chamados/${id}`);
   }
 
   findAll(): Observable<Chamado[]> {
-    return this.http.get<Chamado[]>(`/chamados`);
+    return this.http.get<Chamado[]>(`/api/chamados`);
   }
 
   create(chamado: Chamado): Observable<Chamado> {
-    return this.http.post<Chamado>(`/chamados`, chamado);
+    return this.http.post<Chamado>(`/api/chamados`, chamado);
   }
 
   update(chamado: Chamado): Observable<Chamado> {
-    return this.http.put<Chamado>(`/chamados/${chamado.id}`, chamado);
+    return this.http.put<Chamado>(`/api/chamados/${chamado.id}`, chamado);
   }
 }

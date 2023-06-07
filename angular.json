@@ -96,7 +96,7 @@
             },
             "development": {
               "browserTarget": "helpdesk:build:development",
-              "proxyConfig": "src/proxy.config.js"
+              "proxyConfig": "src/proxy.conf.json"
 
             }
           },
@@ -111,5 +111,8 @@
       }
     }
   },
-  "defaultProject": "helpdesk"
+  "defaultProject": "helpdesk",
+  "cli": {
+    "analytics": "d58bee0e-d5a3-44f9-9e45-85a530ff3712"
+  }
 }
